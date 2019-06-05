@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.539
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestorParaVentaDeLoteria.LogicaDeNegocio", "GestorParaVentaDeLoteria.LogicaDeNegocio\GestorParaVentaDeLoteria.LogicaDeNegocio.csproj", "{77F60634-6580-47EC-A49A-EE65FE2A5C1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestorParaVentaDeLoteria.Modelo", "GestorParaVentaDeLoteria.Modelo\GestorParaVentaDeLoteria.Modelo.csproj", "{F6F614D6-11D8-4388-9EB1-F8131A74510E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestorParaVentaDeLoteria.AccesoADatos", "GestorParaVentaDeLoteria.AccesoADatos\GestorParaVentaDeLoteria.AccesoADatos.csproj", "{E9C50D21-DB7D-4D92-AB4D-E058DEB11C79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestorParaVentaDeLoteria.UI", "GestorParaVentaDeLoteria.UI\GestorParaVentaDeLoteria.UI.csproj", "{BD64EF9A-7533-4BE0-9491-58F8083E58C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestorParaVentaDeLoteria.SI", "GestorParaVentaDeLoteria.SI\GestorParaVentaDeLoteria.SI.csproj", "{6D369D8A-F768-46A5-B438-10570E1E501C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77F60634-6580-47EC-A49A-EE65FE2A5C1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77F60634-6580-47EC-A49A-EE65FE2A5C1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77F60634-6580-47EC-A49A-EE65FE2A5C1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77F60634-6580-47EC-A49A-EE65FE2A5C1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6F614D6-11D8-4388-9EB1-F8131A74510E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6F614D6-11D8-4388-9EB1-F8131A74510E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6F614D6-11D8-4388-9EB1-F8131A74510E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6F614D6-11D8-4388-9EB1-F8131A74510E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9C50D21-DB7D-4D92-AB4D-E058DEB11C79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9C50D21-DB7D-4D92-AB4D-E058DEB11C79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9C50D21-DB7D-4D92-AB4D-E058DEB11C79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9C50D21-DB7D-4D92-AB4D-E058DEB11C79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD64EF9A-7533-4BE0-9491-58F8083E58C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD64EF9A-7533-4BE0-9491-58F8083E58C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD64EF9A-7533-4BE0-9491-58F8083E58C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD64EF9A-7533-4BE0-9491-58F8083E58C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D369D8A-F768-46A5-B438-10570E1E501C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D369D8A-F768-46A5-B438-10570E1E501C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D369D8A-F768-46A5-B438-10570E1E501C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D369D8A-F768-46A5-B438-10570E1E501C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3BBA11E3-594C-48DE-91B6-98953B4CB565}
+	EndGlobalSection
+EndGlobal
