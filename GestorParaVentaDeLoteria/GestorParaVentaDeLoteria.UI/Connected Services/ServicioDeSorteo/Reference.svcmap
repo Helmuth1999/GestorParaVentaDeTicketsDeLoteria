@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="262d1278-5641-4792-9a48-60c6d8c968b9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:56043/ServicioDeSorteo.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServicioDeSorteo.xsd" MetadataType="Schema" ID="b73e5c11-d8bc-4acc-b2fd-8d2c3fd4ab97" SourceId="1" SourceUrl="http://localhost:56043/ServicioDeSorteo.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServicioDeSorteo.disco" MetadataType="Disco" ID="cf2ae585-9602-46ee-8680-0de37d59db2f" SourceId="1" SourceUrl="http://localhost:56043/ServicioDeSorteo.svc?disco" />
+    <MetadataFile FileName="ServicioDeSorteo1.xsd" MetadataType="Schema" ID="de85bbee-ee7a-4c1d-a42c-b64087c962f0" SourceId="1" SourceUrl="http://localhost:56043/ServicioDeSorteo.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServicioDeSorteo2.xsd" MetadataType="Schema" ID="5f7dcf1c-b05b-4958-b518-1ca168a408df" SourceId="1" SourceUrl="http://localhost:56043/ServicioDeSorteo.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServicioDeSorteo.wsdl" MetadataType="Wsdl" ID="a6fffb49-2e08-4f91-9f18-0612bf33b478" SourceId="1" SourceUrl="http://localhost:56043/ServicioDeSorteo.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

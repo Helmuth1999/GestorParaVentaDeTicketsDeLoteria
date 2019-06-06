@@ -10,8 +10,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestorParaVentaDeLoteria.AccesoADatos", "GestorParaVentaDeLoteria.AccesoADatos\GestorParaVentaDeLoteria.AccesoADatos.csproj", "{E9C50D21-DB7D-4D92-AB4D-E058DEB11C79}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestorParaVentaDeLoteria.UI", "GestorParaVentaDeLoteria.UI\GestorParaVentaDeLoteria.UI.csproj", "{BD64EF9A-7533-4BE0-9491-58F8083E58C1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5B66B063-3031-4442-A603-A401DA179F30} = {5B66B063-3031-4442-A603-A401DA179F30}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestorParaVentaDeLoteria.SI", "GestorParaVentaDeLoteria.SI\GestorParaVentaDeLoteria.SI.csproj", "{6D369D8A-F768-46A5-B438-10570E1E501C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestorParaVentaDeLoteria.SI", "GestorParaVentaDeLoteria.SI\GestorParaVentaDeLoteria.SI.csproj", "{5B66B063-3031-4442-A603-A401DA179F30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +38,10 @@ Global
 		{BD64EF9A-7533-4BE0-9491-58F8083E58C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD64EF9A-7533-4BE0-9491-58F8083E58C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD64EF9A-7533-4BE0-9491-58F8083E58C1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6D369D8A-F768-46A5-B438-10570E1E501C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6D369D8A-F768-46A5-B438-10570E1E501C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6D369D8A-F768-46A5-B438-10570E1E501C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6D369D8A-F768-46A5-B438-10570E1E501C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B66B063-3031-4442-A603-A401DA179F30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B66B063-3031-4442-A603-A401DA179F30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B66B063-3031-4442-A603-A401DA179F30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B66B063-3031-4442-A603-A401DA179F30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

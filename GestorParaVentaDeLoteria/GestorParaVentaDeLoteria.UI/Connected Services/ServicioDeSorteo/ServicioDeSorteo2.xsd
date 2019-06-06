@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/GestorParaVentaDeLoteria.Modelo" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GestorParaVentaDeLoteria.Modelo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:56043/ServicioDeSorteo.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfSorteos">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Sorteos" nillable="true" type="tns:Sorteos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSorteos" nillable="true" type="tns:ArrayOfSorteos" />
+  <xs:complexType name="Sorteos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Estado" type="tns:Estado" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Sorteos" nillable="true" type="tns:Sorteos" />
+  <xs:simpleType name="Estado">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Activo">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Inactivo">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Estado" nillable="true" type="tns:Estado" />
+</xs:schema>
