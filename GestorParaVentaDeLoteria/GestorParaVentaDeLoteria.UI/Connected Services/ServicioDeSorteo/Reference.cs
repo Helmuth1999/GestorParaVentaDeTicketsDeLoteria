@@ -26,6 +26,36 @@ namespace GestorParaVentaDeLoteria.UI.ServicioDeSorteo {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioDeSorteo/Agregar", ReplyAction="http://tempuri.org/IServicioDeSorteo/AgregarResponse")]
         System.Threading.Tasks.Task AgregarAsync(GestorParaVentaDeLoteria.Modelo.Sorteos item);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioDeSorteo/ActivarSorteo", ReplyAction="http://tempuri.org/IServicioDeSorteo/ActivarSorteoResponse")]
+        void ActivarSorteo(GestorParaVentaDeLoteria.Modelo.SorteosHistorico item);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioDeSorteo/ActivarSorteo", ReplyAction="http://tempuri.org/IServicioDeSorteo/ActivarSorteoResponse")]
+        System.Threading.Tasks.Task ActivarSorteoAsync(GestorParaVentaDeLoteria.Modelo.SorteosHistorico item);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioDeSorteo/InactivarSorteo", ReplyAction="http://tempuri.org/IServicioDeSorteo/InactivarSorteoResponse")]
+        void InactivarSorteo(GestorParaVentaDeLoteria.Modelo.SorteosHistorico item);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioDeSorteo/InactivarSorteo", ReplyAction="http://tempuri.org/IServicioDeSorteo/InactivarSorteoResponse")]
+        System.Threading.Tasks.Task InactivarSorteoAsync(GestorParaVentaDeLoteria.Modelo.SorteosHistorico item);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioDeSorteo/ConsultarSorteo", ReplyAction="http://tempuri.org/IServicioDeSorteo/ConsultarSorteoResponse")]
+        GestorParaVentaDeLoteria.Modelo.Sorteos ConsultarSorteo(int idSorteo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioDeSorteo/ConsultarSorteo", ReplyAction="http://tempuri.org/IServicioDeSorteo/ConsultarSorteoResponse")]
+        System.Threading.Tasks.Task<GestorParaVentaDeLoteria.Modelo.Sorteos> ConsultarSorteoAsync(int idSorteo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioDeSorteo/ListarHistoricoDeSorteo", ReplyAction="http://tempuri.org/IServicioDeSorteo/ListarHistoricoDeSorteoResponse")]
+        GestorParaVentaDeLoteria.Modelo.SorteosHistorico[] ListarHistoricoDeSorteo(int idSorteo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioDeSorteo/ListarHistoricoDeSorteo", ReplyAction="http://tempuri.org/IServicioDeSorteo/ListarHistoricoDeSorteoResponse")]
+        System.Threading.Tasks.Task<GestorParaVentaDeLoteria.Modelo.SorteosHistorico[]> ListarHistoricoDeSorteoAsync(int idSorteo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioDeSorteo/ConsultarIdDeSorteoHistorico", ReplyAction="http://tempuri.org/IServicioDeSorteo/ConsultarIdDeSorteoHistoricoResponse")]
+        GestorParaVentaDeLoteria.Modelo.SorteosHistorico ConsultarIdDeSorteoHistorico(int Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioDeSorteo/ConsultarIdDeSorteoHistorico", ReplyAction="http://tempuri.org/IServicioDeSorteo/ConsultarIdDeSorteoHistoricoResponse")]
+        System.Threading.Tasks.Task<GestorParaVentaDeLoteria.Modelo.SorteosHistorico> ConsultarIdDeSorteoHistoricoAsync(int Id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -69,6 +99,46 @@ namespace GestorParaVentaDeLoteria.UI.ServicioDeSorteo {
         
         public System.Threading.Tasks.Task AgregarAsync(GestorParaVentaDeLoteria.Modelo.Sorteos item) {
             return base.Channel.AgregarAsync(item);
+        }
+        
+        public void ActivarSorteo(GestorParaVentaDeLoteria.Modelo.SorteosHistorico item) {
+            base.Channel.ActivarSorteo(item);
+        }
+        
+        public System.Threading.Tasks.Task ActivarSorteoAsync(GestorParaVentaDeLoteria.Modelo.SorteosHistorico item) {
+            return base.Channel.ActivarSorteoAsync(item);
+        }
+        
+        public void InactivarSorteo(GestorParaVentaDeLoteria.Modelo.SorteosHistorico item) {
+            base.Channel.InactivarSorteo(item);
+        }
+        
+        public System.Threading.Tasks.Task InactivarSorteoAsync(GestorParaVentaDeLoteria.Modelo.SorteosHistorico item) {
+            return base.Channel.InactivarSorteoAsync(item);
+        }
+        
+        public GestorParaVentaDeLoteria.Modelo.Sorteos ConsultarSorteo(int idSorteo) {
+            return base.Channel.ConsultarSorteo(idSorteo);
+        }
+        
+        public System.Threading.Tasks.Task<GestorParaVentaDeLoteria.Modelo.Sorteos> ConsultarSorteoAsync(int idSorteo) {
+            return base.Channel.ConsultarSorteoAsync(idSorteo);
+        }
+        
+        public GestorParaVentaDeLoteria.Modelo.SorteosHistorico[] ListarHistoricoDeSorteo(int idSorteo) {
+            return base.Channel.ListarHistoricoDeSorteo(idSorteo);
+        }
+        
+        public System.Threading.Tasks.Task<GestorParaVentaDeLoteria.Modelo.SorteosHistorico[]> ListarHistoricoDeSorteoAsync(int idSorteo) {
+            return base.Channel.ListarHistoricoDeSorteoAsync(idSorteo);
+        }
+        
+        public GestorParaVentaDeLoteria.Modelo.SorteosHistorico ConsultarIdDeSorteoHistorico(int Id) {
+            return base.Channel.ConsultarIdDeSorteoHistorico(Id);
+        }
+        
+        public System.Threading.Tasks.Task<GestorParaVentaDeLoteria.Modelo.SorteosHistorico> ConsultarIdDeSorteoHistoricoAsync(int Id) {
+            return base.Channel.ConsultarIdDeSorteoHistoricoAsync(Id);
         }
     }
 }

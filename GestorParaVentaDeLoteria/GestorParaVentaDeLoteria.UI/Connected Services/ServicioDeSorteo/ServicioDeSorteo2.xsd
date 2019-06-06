@@ -34,4 +34,47 @@
     </xs:restriction>
   </xs:simpleType>
   <xs:element name="Estado" nillable="true" type="tns:Estado" />
+  <xs:complexType name="SorteosHistorico">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DescripcionDeLaModificacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaDeModificacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IdSorteo" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_AspNetUser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoDeModificacion" type="tns:TipoDeModificacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SorteosHistorico" nillable="true" type="tns:SorteosHistorico" />
+  <xs:simpleType name="TipoDeModificacion">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Insercion">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Activacion">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Inactivacion">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TipoDeModificacion" nillable="true" type="tns:TipoDeModificacion" />
+  <xs:complexType name="ArrayOfSorteosHistorico">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SorteosHistorico" nillable="true" type="tns:SorteosHistorico" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSorteosHistorico" nillable="true" type="tns:ArrayOfSorteosHistorico" />
 </xs:schema>

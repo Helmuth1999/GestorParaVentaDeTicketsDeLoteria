@@ -19,6 +19,36 @@
   <wsdl:message name="IServicioDeSorteo_Agregar_OutputMessage">
     <wsdl:part name="parameters" element="tns:AgregarResponse" />
   </wsdl:message>
+  <wsdl:message name="IServicioDeSorteo_ActivarSorteo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActivarSorteo" />
+  </wsdl:message>
+  <wsdl:message name="IServicioDeSorteo_ActivarSorteo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActivarSorteoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioDeSorteo_InactivarSorteo_InputMessage">
+    <wsdl:part name="parameters" element="tns:InactivarSorteo" />
+  </wsdl:message>
+  <wsdl:message name="IServicioDeSorteo_InactivarSorteo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InactivarSorteoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioDeSorteo_ConsultarSorteo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarSorteo" />
+  </wsdl:message>
+  <wsdl:message name="IServicioDeSorteo_ConsultarSorteo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarSorteoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioDeSorteo_ListarHistoricoDeSorteo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarHistoricoDeSorteo" />
+  </wsdl:message>
+  <wsdl:message name="IServicioDeSorteo_ListarHistoricoDeSorteo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarHistoricoDeSorteoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioDeSorteo_ConsultarIdDeSorteoHistorico_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarIdDeSorteoHistorico" />
+  </wsdl:message>
+  <wsdl:message name="IServicioDeSorteo_ConsultarIdDeSorteoHistorico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarIdDeSorteoHistoricoResponse" />
+  </wsdl:message>
   <wsdl:portType name="IServicioDeSorteo">
     <wsdl:operation name="Listar">
       <wsdl:input wsaw:Action="http://tempuri.org/IServicioDeSorteo/Listar" message="tns:IServicioDeSorteo_Listar_InputMessage" />
@@ -27,6 +57,26 @@
     <wsdl:operation name="Agregar">
       <wsdl:input wsaw:Action="http://tempuri.org/IServicioDeSorteo/Agregar" message="tns:IServicioDeSorteo_Agregar_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServicioDeSorteo/AgregarResponse" message="tns:IServicioDeSorteo_Agregar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActivarSorteo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioDeSorteo/ActivarSorteo" message="tns:IServicioDeSorteo_ActivarSorteo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioDeSorteo/ActivarSorteoResponse" message="tns:IServicioDeSorteo_ActivarSorteo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InactivarSorteo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioDeSorteo/InactivarSorteo" message="tns:IServicioDeSorteo_InactivarSorteo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioDeSorteo/InactivarSorteoResponse" message="tns:IServicioDeSorteo_InactivarSorteo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSorteo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioDeSorteo/ConsultarSorteo" message="tns:IServicioDeSorteo_ConsultarSorteo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioDeSorteo/ConsultarSorteoResponse" message="tns:IServicioDeSorteo_ConsultarSorteo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarHistoricoDeSorteo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioDeSorteo/ListarHistoricoDeSorteo" message="tns:IServicioDeSorteo_ListarHistoricoDeSorteo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioDeSorteo/ListarHistoricoDeSorteoResponse" message="tns:IServicioDeSorteo_ListarHistoricoDeSorteo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarIdDeSorteoHistorico">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioDeSorteo/ConsultarIdDeSorteoHistorico" message="tns:IServicioDeSorteo_ConsultarIdDeSorteoHistorico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioDeSorteo/ConsultarIdDeSorteoHistoricoResponse" message="tns:IServicioDeSorteo_ConsultarIdDeSorteoHistorico_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IServicioDeSorteo" type="tns:IServicioDeSorteo">
@@ -42,6 +92,51 @@
     </wsdl:operation>
     <wsdl:operation name="Agregar">
       <soap:operation soapAction="http://tempuri.org/IServicioDeSorteo/Agregar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivarSorteo">
+      <soap:operation soapAction="http://tempuri.org/IServicioDeSorteo/ActivarSorteo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InactivarSorteo">
+      <soap:operation soapAction="http://tempuri.org/IServicioDeSorteo/InactivarSorteo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSorteo">
+      <soap:operation soapAction="http://tempuri.org/IServicioDeSorteo/ConsultarSorteo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarHistoricoDeSorteo">
+      <soap:operation soapAction="http://tempuri.org/IServicioDeSorteo/ListarHistoricoDeSorteo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarIdDeSorteoHistorico">
+      <soap:operation soapAction="http://tempuri.org/IServicioDeSorteo/ConsultarIdDeSorteoHistorico" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

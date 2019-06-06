@@ -22,7 +22,9 @@ namespace GestorParaVentaDeLoteria.UI.Controllers
         // GET: Sorteos/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            ServicioDeSorteo.ServicioDeSorteoClient ClienteDeServicioDeSorteo = new ServicioDeSorteo.ServicioDeSorteoClient();
+            var sorteoConsultado = ClienteDeServicioDeSorteo.ConsultarSorteo(id);
+            return View(sorteoConsultado);
         }
 
         // GET: Sorteos/Create
@@ -72,26 +74,60 @@ namespace GestorParaVentaDeLoteria.UI.Controllers
             }
         }
 
-        // GET: Sorteos/Delete/5
-        public ActionResult Delete(int id)
+
+        public ActionResult ActivarSorteo(int id)
         {
-            return View();
+            ServicioDeSorteo.ServicioDeSorteoClient ClienteDeServicioDeSorteo = new ServicioDeSorteo.ServicioDeSorteoClient();
+            Modelo.SorteosHistorico elSorteoHistorico = new Modelo.SorteosHistorico();
+
+            elSorteoHistorico = ClienteDeServicioDeSorteo.ConsultarIdDeSorteoHistorico(id);
+
+            return View(elSorteoHistorico);
         }
 
-        // POST: Sorteos/Delete/5
+        // POST
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult ActivarSorteo(Modelo.SorteosHistorico elSorteoHistorico)
         {
             try
             {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
+                ServicioDeSorteo.ServicioDeSorteoClient ClienteDeServicioDeSorteo = new ServicioDeSorteo.ServicioDeSorteoClient();
+                ClienteDeServicioDeSorteo.ActivarSorteo(elSorteoHistorico);
+                return RedirectToAction("index", "Sorteos");
             }
             catch
             {
                 return View();
             }
         }
+
+
+        public ActionResult InactivarSorteo(int id)
+        {
+            ServicioDeSorteo.ServicioDeSorteoClient ClienteDeServicioDeSorteo = new ServicioDeSorteo.ServicioDeSorteoClient();
+            Modelo.SorteosHistorico elSorteoHistorico = new Modelo.SorteosHistorico();
+
+            elSorteoHistorico = ClienteDeServicioDeSorteo.ConsultarIdDeSorteoHistorico(id);
+
+            return View(elSorteoHistorico);
+        }
+
+        // POST
+        [HttpPost]
+        public ActionResult InactivarSorteo(Modelo.SorteosHistorico elSorteoHistorico)
+        {
+            try
+            {
+                ServicioDeSorteo.ServicioDeSorteoClient ClienteDeServicioDeSorteo = new ServicioDeSorteo.ServicioDeSorteoClient();
+                ClienteDeServicioDeSorteo.InactivarSorteo(elSorteoHistorico);
+                return RedirectToAction("index", "Sorteos");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+
     }
 }

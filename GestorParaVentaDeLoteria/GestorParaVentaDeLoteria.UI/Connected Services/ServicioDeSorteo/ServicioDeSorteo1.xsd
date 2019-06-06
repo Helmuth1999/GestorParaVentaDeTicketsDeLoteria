@@ -25,4 +25,70 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="ActivarSorteo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/GestorParaVentaDeLoteria.Modelo" minOccurs="0" name="item" nillable="true" type="q3:SorteosHistorico" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActivarSorteoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InactivarSorteo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/GestorParaVentaDeLoteria.Modelo" minOccurs="0" name="item" nillable="true" type="q4:SorteosHistorico" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InactivarSorteoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarSorteo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idSorteo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarSorteoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/GestorParaVentaDeLoteria.Modelo" minOccurs="0" name="ConsultarSorteoResult" nillable="true" type="q5:Sorteos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarHistoricoDeSorteo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idSorteo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarHistoricoDeSorteoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/GestorParaVentaDeLoteria.Modelo" minOccurs="0" name="ListarHistoricoDeSorteoResult" nillable="true" type="q6:ArrayOfSorteosHistorico" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarIdDeSorteoHistorico">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarIdDeSorteoHistoricoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/GestorParaVentaDeLoteria.Modelo" minOccurs="0" name="ConsultarIdDeSorteoHistoricoResult" nillable="true" type="q7:SorteosHistorico" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

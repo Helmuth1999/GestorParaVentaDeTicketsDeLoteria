@@ -18,5 +18,20 @@ namespace GestorParaVentaDeLoteria.SI
 
         [OperationContract]
         void Agregar(Modelo.Sorteos item);
+
+        [OperationContract]
+        void ActivarSorteo(Modelo.SorteosHistorico item);
+
+        [OperationContract]
+        void InactivarSorteo(Modelo.SorteosHistorico item);
+
+        [OperationContract]
+        Modelo.Sorteos ConsultarSorteo(int idSorteo);
+
+        [OperationContract]
+        List<Modelo.SorteosHistorico> ListarHistoricoDeSorteo(int idSorteo);
+
+        [OperationContract]
+        Modelo.SorteosHistorico ConsultarIdDeSorteoHistorico(int Id);
     }
 }

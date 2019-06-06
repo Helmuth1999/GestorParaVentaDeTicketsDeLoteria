@@ -39,7 +39,7 @@ namespace GestorParaVentaDeLoteria.LogicaDeNegocio
             AccesoADatos.OperacionesDeSorteosHistorico operacionesDeSorteosHistorico = new AccesoADatos.OperacionesDeSorteosHistorico();
 
             Modelo.SorteosHistorico elsorteosHistoricoAModificar;
-            elsorteosHistoricoAModificar = ConsultarSortesHistoricoPorId(sorteosHistorico.Id);
+            elsorteosHistoricoAModificar = ConsultarSorteosHistoricoPorId(sorteosHistorico.Id);
             elsorteosHistoricoAModificar.IdSorteo = sorteosHistorico.IdSorteo;
             elsorteosHistoricoAModificar.Id_AspNetUser = "a";//////////////ARREGLAR
             elsorteosHistoricoAModificar.TipoDeModificacion = Modelo.TipoDeModificacion.Activacion;
@@ -49,13 +49,13 @@ namespace GestorParaVentaDeLoteria.LogicaDeNegocio
             operacionesDeSorteosHistorico.Agregar(elsorteosHistoricoAModificar);
         }
 
-        public Modelo.SorteosHistorico ConsultarSortesHistoricoPorId(int Id)
+        public Modelo.SorteosHistorico ConsultarSorteosHistoricoPorId(int Id)
         {
             AccesoADatos.OperacionesDeSorteosHistorico operacionesDeSorteosHistorico = new AccesoADatos.OperacionesDeSorteosHistorico();
             return operacionesDeSorteosHistorico.ObtenerSorteoHistoricoPorId(Id);
         }
 
-        public void	InactivarSorteo(Modelo.SorteosHistorico sorteosHistorico)
+        public void InactivarSorteo(Modelo.SorteosHistorico sorteosHistorico)
         {
             AccesoADatos.OperacionesDeSorteos operacionesDeSorteos = new AccesoADatos.OperacionesDeSorteos();
 
@@ -67,7 +67,7 @@ namespace GestorParaVentaDeLoteria.LogicaDeNegocio
             AccesoADatos.OperacionesDeSorteosHistorico operacionesDeSorteosHistorico = new AccesoADatos.OperacionesDeSorteosHistorico();
 
             Modelo.SorteosHistorico elsorteosHistoricoAModificar;
-            elsorteosHistoricoAModificar = ConsultarSortesHistoricoPorId(sorteosHistorico.Id);
+            elsorteosHistoricoAModificar = ConsultarSorteosHistoricoPorId(sorteosHistorico.Id);
             elsorteosHistoricoAModificar.IdSorteo = sorteosHistorico.IdSorteo;
             elsorteosHistoricoAModificar.Id_AspNetUser = "a";//////////////ARREGLAR
             elsorteosHistoricoAModificar.TipoDeModificacion = Modelo.TipoDeModificacion.Inactivacion;
@@ -75,6 +75,7 @@ namespace GestorParaVentaDeLoteria.LogicaDeNegocio
             elsorteosHistoricoAModificar.DescripcionDeLaModificacion = sorteosHistorico.DescripcionDeLaModificacion;
 
             operacionesDeSorteosHistorico.Agregar(elsorteosHistoricoAModificar);
+
         }
 
         public Modelo.Sorteos ConsultarSorteo(int Id)
@@ -83,6 +84,14 @@ namespace GestorParaVentaDeLoteria.LogicaDeNegocio
             AccesoADatos.OperacionesDeSorteos operacionesDeSorteos= new AccesoADatos.OperacionesDeSorteos();
 
             return operacionesDeSorteos.Consultar(Id);
+        }
+
+        public Modelo.SorteosHistorico ConsultarIdDeSorteoHistorico(int Id)
+        {
+
+            AccesoADatos.OperacionesDeSorteosHistorico operacionesDeSorteosHistorico = new AccesoADatos.OperacionesDeSorteosHistorico();
+
+            return operacionesDeSorteosHistorico.ObtenerSorteoHistoricoPorId(Id);
         }
 
         public List<Modelo.Sorteos> ListarSorteos()

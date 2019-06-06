@@ -23,5 +23,43 @@ namespace GestorParaVentaDeLoteria.SI
             LogicaDeNegocio.AdministradorDeSorteos administradorDeSorteos = new LogicaDeNegocio.AdministradorDeSorteos();
             administradorDeSorteos.AgreagarSorteo(item);
         }
+
+        public void ActivarSorteo(Modelo.SorteosHistorico item)
+        {
+            LogicaDeNegocio.AdministradorDeSorteos administradorDeSorteos = new LogicaDeNegocio.AdministradorDeSorteos();
+            administradorDeSorteos.ActivarSorteo(item);
+        }
+
+        public void InactivarSorteo(Modelo.SorteosHistorico item)
+        {
+            LogicaDeNegocio.AdministradorDeSorteos administradorDeSorteos = new LogicaDeNegocio.AdministradorDeSorteos();
+            administradorDeSorteos.InactivarSorteo(item);
+        }
+
+        public Modelo.SorteosHistorico ConsultarIdDeSorteoHistorico(int Id)
+        {
+
+            LogicaDeNegocio.AdministradorDeSorteos administradorDeSorteos = new LogicaDeNegocio.AdministradorDeSorteos();
+
+            return administradorDeSorteos.ConsultarIdDeSorteoHistorico(Id);
+        }
+
+
+        public Modelo.Sorteos ConsultarSorteo(int idSorteo)
+        {
+
+            LogicaDeNegocio.AdministradorDeSorteos administradorDeSorteos = new LogicaDeNegocio.AdministradorDeSorteos();
+
+            return administradorDeSorteos.ConsultarSorteo(idSorteo);
+        }
+
+        public List<Modelo.SorteosHistorico> ListarHistoricoDeSorteo(int idSorteo)
+        {
+            LogicaDeNegocio.AdministradorDeSorteos administradorDeSorteos = new LogicaDeNegocio.AdministradorDeSorteos();
+            return administradorDeSorteos.ListarHistoricoDeSorteo(idSorteo);
+        }
+
+
+
     }
 }
