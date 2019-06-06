@@ -19,6 +19,17 @@ namespace GestorParaVentaDeLoteria.AccesoADatos
 
     public class Context : DbContext
     {
-        
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<AspNetRoles>().ToTable("AspNetRoles");
+            modelBuilder.Entity<AspNetUserClaims>().ToTable("AspNetUserClaims");
+            modelBuilder.Entity<AspNetUserLogins>().ToTable("AspNetUserLogins");
+            modelBuilder.Entity<AspNetUsers>().ToTable("AspNetUsers");
+            modelBuilder.Entity<SorteoDetalleVentas>().ToTable("SorteoDetalleVentas");
+            modelBuilder.Entity<Sorteos>().ToTable("Sorteos");
+            modelBuilder.Entity<SorteosDetalleVentas>().ToTable("SorteosDetalleVentas");
+            modelBuilder.Entity<SorteosHistorico>().ToTable("SorteosHistorico");
+            modelBuilder.Entity<SorteosRestriciones>().ToTable("SorteosRestriciones");
+        }
     }
 }
