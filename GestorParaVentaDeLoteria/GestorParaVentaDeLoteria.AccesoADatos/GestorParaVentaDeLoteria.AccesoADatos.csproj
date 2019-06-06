@@ -55,5 +55,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GestorParaVentaDeLoteria.Modelo\GestorParaVentaDeLoteria.Modelo.csproj">
+      <Project>{f6f614d6-11d8-4388-9eb1-f8131a74510e}</Project>
+      <Name>GestorParaVentaDeLoteria.Modelo</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
