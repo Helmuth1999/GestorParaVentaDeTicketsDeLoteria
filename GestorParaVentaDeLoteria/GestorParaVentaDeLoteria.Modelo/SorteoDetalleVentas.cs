@@ -6,7 +6,7 @@ namespace GestorParaVentaDeLoteria.Modelo
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class SorteosDetalleVentas
+    public partial class SorteoDetalleVentas
     {
         public int Id { get; set; }
 
@@ -16,12 +16,6 @@ namespace GestorParaVentaDeLoteria.Modelo
 
         [Column(TypeName = "money")]
         public decimal Monto { get; set; }
-
-        [Required]
-        [StringLength(128)]
-        public string Id_AspNetUser { get; set; }
-
-        public virtual AspNetUsers AspNetUsers { get; set; }
 
         public virtual Sorteos Sorteos { get; set; }
     }

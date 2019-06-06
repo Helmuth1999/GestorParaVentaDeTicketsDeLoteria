@@ -38,16 +38,6 @@ namespace GestorParaVentaDeLoteria.AccesoADatos
             db.SaveChanges();
         }
 
-        public Modelo.Sorteos Consultar(int Id)
-        {
-
-            var db = new Context();
-            var resultado = db.Sorteos.Find(Id);
-
-
-            return resultado;
-        }
-
         public List<Modelo.Sorteos> Listar()
         {
 

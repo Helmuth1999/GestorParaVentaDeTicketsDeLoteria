@@ -18,7 +18,7 @@ namespace GestorParaVentaDeLoteria.LogicaDeNegocio
             Modelo.SorteosHistorico elsorteosHistorico= new Modelo.SorteosHistorico();
             AccesoADatos.OperacionesDeSorteosHistorico operacionesDeSorteosHistorico = new AccesoADatos.OperacionesDeSorteosHistorico();
             elsorteosHistorico.IdSorteo = elSorteo.Id;
-            elsorteosHistorico.Id_AspNetUser = "a";//////////////ARREGLAR
+            elsorteosHistorico.Id_AspNetUser = "1";//////////////ARREGLAR
             elsorteosHistorico.TipoDeModificacion = Modelo.TipoDeModificacion.Insercion;
             elsorteosHistorico.FechaDeModificacion = DateTime.Now;
             elsorteosHistorico.DescripcionDeLaModificacion = "Registro de sorteo";
@@ -83,7 +83,7 @@ namespace GestorParaVentaDeLoteria.LogicaDeNegocio
 
             AccesoADatos.OperacionesDeSorteos operacionesDeSorteos= new AccesoADatos.OperacionesDeSorteos();
 
-            return operacionesDeSorteos.Consultar(Id);
+            return operacionesDeSorteos.ObtenerSorteoPorId(Id);
         }
 
         public Modelo.SorteosHistorico ConsultarIdDeSorteoHistorico(int Id)

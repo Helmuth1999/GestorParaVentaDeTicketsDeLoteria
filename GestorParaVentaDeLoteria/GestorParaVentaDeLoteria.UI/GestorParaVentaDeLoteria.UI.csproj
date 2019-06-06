@@ -210,6 +210,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Properties\DataSources\GestorParaVentaDeLoteria.Modelo.Sorteos.datasource" />
+    <Content Include="Properties\DataSources\GestorParaVentaDeLoteria.Modelo.SorteosHistorico.datasource" />
     <None Include="Connected Services\ServicioDeSorteo\ServicioDeSorteo.wsdl" />
     <None Include="Connected Services\ServicioDeSorteo\ServicioDeSorteo.xsd">
       <SubType>Designer</SubType>
@@ -220,8 +222,6 @@
     <None Include="Connected Services\ServicioDeSorteo\ServicioDeSorteo2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="Properties\DataSources\GestorParaVentaDeLoteria.Modelo.Sorteos.datasource" />
-    <Content Include="Properties\DataSources\GestorParaVentaDeLoteria.Modelo.SorteosHistorico.datasource" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -264,10 +264,14 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Sorteos\Index.cshtml" />
+    <Content Include="Views\Sorteos\Create.cshtml" />
+    <Content Include="Views\Sorteos\InactivarSorteo.cshtml" />
+    <Content Include="Views\Sorteos\Details.cshtml" />
+    <Content Include="Views\Sorteos\ActivarSorteo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Sorteos\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -283,6 +287,10 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GestorParaVentaDeLoteria.LogicaDeNegocio\GestorParaVentaDeLoteria.LogicaDeNegocio.csproj">
+      <Project>{77f60634-6580-47ec-a49a-ee65fe2a5c1b}</Project>
+      <Name>GestorParaVentaDeLoteria.LogicaDeNegocio</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GestorParaVentaDeLoteria.Modelo\GestorParaVentaDeLoteria.Modelo.csproj">
       <Project>{f6f614d6-11d8-4388-9eb1-f8131a74510e}</Project>
       <Name>GestorParaVentaDeLoteria.Modelo</Name>

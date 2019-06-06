@@ -12,6 +12,10 @@
       <xs:element minOccurs="0" name="Estado" type="tns:Estado" />
       <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="SorteoDetalleVentas" nillable="true" type="tns:ArrayOfSorteoDetalleVentas" />
+      <xs:element minOccurs="0" name="SorteosDetalleVentas" nillable="true" type="tns:ArrayOfSorteosDetalleVentas" />
+      <xs:element minOccurs="0" name="SorteosHistorico" nillable="true" type="tns:ArrayOfSorteosHistorico" />
+      <xs:element minOccurs="0" name="SorteosRestriciones" nillable="true" type="tns:ArrayOfSorteosRestriciones" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Sorteos" nillable="true" type="tns:Sorteos" />
@@ -34,6 +38,118 @@
     </xs:restriction>
   </xs:simpleType>
   <xs:element name="Estado" nillable="true" type="tns:Estado" />
+  <xs:complexType name="ArrayOfSorteoDetalleVentas">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SorteoDetalleVentas" nillable="true" type="tns:SorteoDetalleVentas" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSorteoDetalleVentas" nillable="true" type="tns:ArrayOfSorteoDetalleVentas" />
+  <xs:complexType name="SorteoDetalleVentas">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IdSorteos" type="xs:int" />
+      <xs:element minOccurs="0" name="Monto" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Numero" type="xs:int" />
+      <xs:element minOccurs="0" name="Sorteos" nillable="true" type="tns:Sorteos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SorteoDetalleVentas" nillable="true" type="tns:SorteoDetalleVentas" />
+  <xs:complexType name="ArrayOfSorteosDetalleVentas">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SorteosDetalleVentas" nillable="true" type="tns:SorteosDetalleVentas" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSorteosDetalleVentas" nillable="true" type="tns:ArrayOfSorteosDetalleVentas" />
+  <xs:complexType name="SorteosDetalleVentas">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AspNetUsers" nillable="true" type="tns:AspNetUsers" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IdSorteos" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_AspNetUser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Monto" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Numero" type="xs:int" />
+      <xs:element minOccurs="0" name="Sorteos" nillable="true" type="tns:Sorteos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SorteosDetalleVentas" nillable="true" type="tns:SorteosDetalleVentas" />
+  <xs:complexType name="AspNetUsers">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccessFailedCount" type="xs:int" />
+      <xs:element minOccurs="0" name="AspNetRoles" nillable="true" type="tns:ArrayOfAspNetRoles" />
+      <xs:element minOccurs="0" name="AspNetUserClaims" nillable="true" type="tns:ArrayOfAspNetUserClaims" />
+      <xs:element minOccurs="0" name="AspNetUserLogins" nillable="true" type="tns:ArrayOfAspNetUserLogins" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmailConfirmed" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LockoutEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LockoutEndDateUtc" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PasswordHash" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneNumberConfirmed" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SecurityStamp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SorteosDetalleVentas" nillable="true" type="tns:ArrayOfSorteosDetalleVentas" />
+      <xs:element minOccurs="0" name="TwoFactorEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AspNetUsers" nillable="true" type="tns:AspNetUsers" />
+  <xs:complexType name="ArrayOfAspNetRoles">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AspNetRoles" nillable="true" type="tns:AspNetRoles" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAspNetRoles" nillable="true" type="tns:ArrayOfAspNetRoles" />
+  <xs:complexType name="AspNetRoles">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AspNetUsers" nillable="true" type="tns:ArrayOfAspNetUsers" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AspNetRoles" nillable="true" type="tns:AspNetRoles" />
+  <xs:complexType name="ArrayOfAspNetUsers">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AspNetUsers" nillable="true" type="tns:AspNetUsers" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAspNetUsers" nillable="true" type="tns:ArrayOfAspNetUsers" />
+  <xs:complexType name="ArrayOfAspNetUserClaims">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AspNetUserClaims" nillable="true" type="tns:AspNetUserClaims" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAspNetUserClaims" nillable="true" type="tns:ArrayOfAspNetUserClaims" />
+  <xs:complexType name="AspNetUserClaims">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AspNetUsers" nillable="true" type="tns:AspNetUsers" />
+      <xs:element minOccurs="0" name="ClaimType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClaimValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AspNetUserClaims" nillable="true" type="tns:AspNetUserClaims" />
+  <xs:complexType name="ArrayOfAspNetUserLogins">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AspNetUserLogins" nillable="true" type="tns:AspNetUserLogins" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAspNetUserLogins" nillable="true" type="tns:ArrayOfAspNetUserLogins" />
+  <xs:complexType name="AspNetUserLogins">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AspNetUsers" nillable="true" type="tns:AspNetUsers" />
+      <xs:element minOccurs="0" name="LoginProvider" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProviderKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AspNetUserLogins" nillable="true" type="tns:AspNetUserLogins" />
+  <xs:complexType name="ArrayOfSorteosHistorico">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SorteosHistorico" nillable="true" type="tns:SorteosHistorico" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSorteosHistorico" nillable="true" type="tns:ArrayOfSorteosHistorico" />
   <xs:complexType name="SorteosHistorico">
     <xs:sequence>
       <xs:element minOccurs="0" name="DescripcionDeLaModificacion" nillable="true" type="xs:string" />
@@ -41,6 +157,7 @@
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="IdSorteo" type="xs:int" />
       <xs:element minOccurs="0" name="Id_AspNetUser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sorteos" nillable="true" type="tns:Sorteos" />
       <xs:element minOccurs="0" name="TipoDeModificacion" type="tns:TipoDeModificacion" />
     </xs:sequence>
   </xs:complexType>
@@ -71,10 +188,20 @@
     </xs:restriction>
   </xs:simpleType>
   <xs:element name="TipoDeModificacion" nillable="true" type="tns:TipoDeModificacion" />
-  <xs:complexType name="ArrayOfSorteosHistorico">
+  <xs:complexType name="ArrayOfSorteosRestriciones">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="SorteosHistorico" nillable="true" type="tns:SorteosHistorico" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SorteosRestriciones" nillable="true" type="tns:SorteosRestriciones" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfSorteosHistorico" nillable="true" type="tns:ArrayOfSorteosHistorico" />
+  <xs:element name="ArrayOfSorteosRestriciones" nillable="true" type="tns:ArrayOfSorteosRestriciones" />
+  <xs:complexType name="SorteosRestriciones">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IdSorteos" type="xs:int" />
+      <xs:element minOccurs="0" name="MontoMáximo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Numero" type="xs:int" />
+      <xs:element minOccurs="0" name="Sorteos" nillable="true" type="tns:Sorteos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SorteosRestriciones" nillable="true" type="tns:SorteosRestriciones" />
 </xs:schema>

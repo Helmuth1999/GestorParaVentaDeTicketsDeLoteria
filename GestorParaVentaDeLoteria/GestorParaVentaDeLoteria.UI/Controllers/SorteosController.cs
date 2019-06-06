@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+/*web.conf quitar el string de coneccion de ahi, es solo en el servicio. AREGLAR LA SI porque no hace nada. Terminar mi parte*/
 namespace GestorParaVentaDeLoteria.UI.Controllers
 {
     public class SorteosController : Controller
@@ -12,9 +12,11 @@ namespace GestorParaVentaDeLoteria.UI.Controllers
         public ActionResult Index()
         {
 
-            ServicioDeSorteo.ServicioDeSorteoClient ClienteDeServicioDeSorteo = new ServicioDeSorteo.ServicioDeSorteoClient();
+            /*ServicioDeSorteo.ServicioDeSorteoClient ClienteDeServicioDeSorteo = new ServicioDeSorteo.ServicioDeSorteoClient();
 
-            var lista = ClienteDeServicioDeSorteo.Listar();
+             var lista = ClienteDeServicioDeSorteo.Listar(); */
+            LogicaDeNegocio.AdministradorDeSorteos administradorDeSorteos = new LogicaDeNegocio.AdministradorDeSorteos();
+           var lista= administradorDeSorteos.ListarSorteos();
 
             return View(lista);
         }
@@ -22,9 +24,13 @@ namespace GestorParaVentaDeLoteria.UI.Controllers
         // GET: Sorteos/Details/5
         public ActionResult Details(int id)
         {
-            ServicioDeSorteo.ServicioDeSorteoClient ClienteDeServicioDeSorteo = new ServicioDeSorteo.ServicioDeSorteoClient();
-            var sorteoConsultado = ClienteDeServicioDeSorteo.ConsultarSorteo(id);
-            return View(sorteoConsultado);
+            /* ServicioDeSorteo.ServicioDeSorteoClient ClienteDeServicioDeSorteo = new ServicioDeSorteo.ServicioDeSorteoClient();
+             var sorteoConsultado = ClienteDeServicioDeSorteo.ConsultarSorteo(id);*/
+
+            LogicaDeNegocio.AdministradorDeSorteos administradorDeSorteos = new LogicaDeNegocio.AdministradorDeSorteos();
+            var lista = administradorDeSorteos.ListarHistoricoDeSorteo(id);
+
+            return View(lista);
         }
 
         // GET: Sorteos/Create
@@ -40,31 +46,11 @@ namespace GestorParaVentaDeLoteria.UI.Controllers
             try
             {
 
-                ServicioDeSorteo.ServicioDeSorteoClient ClienteDeServicioDeSorteo = new ServicioDeSorteo.ServicioDeSorteoClient();
+                /*  ServicioDeSorteo.ServicioDeSorteoClient ClienteDeServicioDeSorteo = new ServicioDeSorteo.ServicioDeSorteoClient();
 
-                ClienteDeServicioDeSorteo.Agregar(elSorteo);
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Sorteos/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: Sorteos/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
+                  ClienteDeServicioDeSorteo.Agregar(elSorteo); */
+                LogicaDeNegocio.AdministradorDeSorteos administradorDeSorteos = new LogicaDeNegocio.AdministradorDeSorteos();
+                administradorDeSorteos.AgreagarSorteo(elSorteo);
 
                 return RedirectToAction("Index");
             }
@@ -73,14 +59,19 @@ namespace GestorParaVentaDeLoteria.UI.Controllers
                 return View();
             }
         }
+
 
 
         public ActionResult ActivarSorteo(int id)
         {
-            ServicioDeSorteo.ServicioDeSorteoClient ClienteDeServicioDeSorteo = new ServicioDeSorteo.ServicioDeSorteoClient();
+            /*ServicioDeSorteo.ServicioDeSorteoClient ClienteDeServicioDeSorteo = new ServicioDeSorteo.ServicioDeSorteoClient();
             Modelo.SorteosHistorico elSorteoHistorico = new Modelo.SorteosHistorico();
 
-            elSorteoHistorico = ClienteDeServicioDeSorteo.ConsultarIdDeSorteoHistorico(id);
+            elSorteoHistorico = ClienteDeServicioDeSorteo.ConsultarIdDeSorteoHistorico(id);*/
+            LogicaDeNegocio.AdministradorDeSorteos administradorDeSorteos = new LogicaDeNegocio.AdministradorDeSorteos();
+            Modelo.SorteosHistorico elSorteoHistorico = new Modelo.SorteosHistorico();
+
+            elSorteoHistorico = administradorDeSorteos.ConsultarIdDeSorteoHistorico(id); 
 
             return View(elSorteoHistorico);
         }
@@ -91,8 +82,10 @@ namespace GestorParaVentaDeLoteria.UI.Controllers
         {
             try
             {
-                ServicioDeSorteo.ServicioDeSorteoClient ClienteDeServicioDeSorteo = new ServicioDeSorteo.ServicioDeSorteoClient();
-                ClienteDeServicioDeSorteo.ActivarSorteo(elSorteoHistorico);
+                /* ServicioDeSorteo.ServicioDeSorteoClient ClienteDeServicioDeSorteo = new ServicioDeSorteo.ServicioDeSorteoClient();
+                 ClienteDeServicioDeSorteo.ActivarSorteo(elSorteoHistorico);*/
+                LogicaDeNegocio.AdministradorDeSorteos administradorDeSorteos = new LogicaDeNegocio.AdministradorDeSorteos();
+                administradorDeSorteos.ActivarSorteo(elSorteoHistorico);
                 return RedirectToAction("index", "Sorteos");
             }
             catch
@@ -104,10 +97,12 @@ namespace GestorParaVentaDeLoteria.UI.Controllers
 
         public ActionResult InactivarSorteo(int id)
         {
-            ServicioDeSorteo.ServicioDeSorteoClient ClienteDeServicioDeSorteo = new ServicioDeSorteo.ServicioDeSorteoClient();
+            /*ServicioDeSorteo.ServicioDeSorteoClient ClienteDeServicioDeSorteo = new ServicioDeSorteo.ServicioDeSorteoClient();
+            Modelo.SorteosHistorico elSorteoHistorico = new Modelo.SorteosHistorico();*/
+            LogicaDeNegocio.AdministradorDeSorteos administradorDeSorteos = new LogicaDeNegocio.AdministradorDeSorteos();
             Modelo.SorteosHistorico elSorteoHistorico = new Modelo.SorteosHistorico();
 
-            elSorteoHistorico = ClienteDeServicioDeSorteo.ConsultarIdDeSorteoHistorico(id);
+            elSorteoHistorico = administradorDeSorteos.ConsultarIdDeSorteoHistorico(id);
 
             return View(elSorteoHistorico);
         }
@@ -118,8 +113,10 @@ namespace GestorParaVentaDeLoteria.UI.Controllers
         {
             try
             {
-                ServicioDeSorteo.ServicioDeSorteoClient ClienteDeServicioDeSorteo = new ServicioDeSorteo.ServicioDeSorteoClient();
-                ClienteDeServicioDeSorteo.InactivarSorteo(elSorteoHistorico);
+                /* ServicioDeSorteo.ServicioDeSorteoClient ClienteDeServicioDeSorteo = new ServicioDeSorteo.ServicioDeSorteoClient();
+                 ClienteDeServicioDeSorteo.InactivarSorteo(elSorteoHistorico);*/
+                LogicaDeNegocio.AdministradorDeSorteos administradorDeSorteos = new LogicaDeNegocio.AdministradorDeSorteos();
+                administradorDeSorteos.InactivarSorteo(elSorteoHistorico);
                 return RedirectToAction("index", "Sorteos");
             }
             catch
@@ -128,6 +125,7 @@ namespace GestorParaVentaDeLoteria.UI.Controllers
             }
         }
 
+    
 
     }
 }
