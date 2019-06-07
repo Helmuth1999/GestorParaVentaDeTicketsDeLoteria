@@ -6,8 +6,7 @@ namespace GestorParaVentaDeLoteria.Modelo
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("SorteosHistorico")]
-    public partial class SorteosHistorico
+    public class SorteosHistorico
     {
         public int Id { get; set; }
 
@@ -15,15 +14,13 @@ namespace GestorParaVentaDeLoteria.Modelo
 
         public DateTime FechaDeModificacion { get; set; }
 
-        [Required]
-        [StringLength(128)]
+
         public string Id_AspNetUser { get; set; }
 
-        [Required]
+
         public string DescripcionDeLaModificacion { get; set; }
 
         public int IdSorteo { get; set; }
 
-        public virtual Sorteos Sorteos { get; set; }
     }
 }

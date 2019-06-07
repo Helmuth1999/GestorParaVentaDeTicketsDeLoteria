@@ -59,6 +59,8 @@
     <Compile Include="Sorteos.cs" />
     <Compile Include="SorteosDetalleVentas.cs" />
     <Compile Include="SorteosHistorico.cs" />
+    <Compile Include="SorteosRestriciones.cs" />
+    <Compile Include="TipoDeModificacion.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
