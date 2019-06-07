@@ -11,7 +11,7 @@ namespace GestorParaVentaDeLoteria.Modelo
     {
         public int Id { get; set; }
         [Display(Name = "Tipo de modificación")]
-        public int TipoDeModificacion { get; set; }
+        public TipoDeModificacion TipoDeModificacion { get; set; }
         [Display(Name = "Fecha de modificacion")]
         public DateTime FechaDeModificacion { get; set; }
         [Display(Name = "Identificador del usuario")]

@@ -51,7 +51,7 @@
 
         <dd>
             @{
-               GestorParaVentaDeLoteria.Modelo.Sorteos elSorteo= administradorDeSorteos.ConsultarSorteo(idSorteo);
+               GestorParaVentaDeLoteria.Modelo.Sorteos elSorteo= administradorDeSorteos.ObtenerSorteoPorId(idSorteo);
             }
 
             @Html.DisplayFor(model => elSorteo.Fecha)
