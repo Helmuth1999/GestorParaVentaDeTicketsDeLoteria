@@ -54,6 +54,7 @@
     <Compile Include="SorteosDetalleVentas.cs" />
     <Compile Include="SorteosHistorico.cs" />
     <Compile Include="SorteosRestriciones.cs" />
+    <Compile Include="TipoDeModificacion.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
