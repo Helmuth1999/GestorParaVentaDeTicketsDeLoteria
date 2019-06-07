@@ -49,6 +49,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context.cs" />
+    <Compile Include="ModuloDeSorteos\OperacionesDeSorteos.cs" />
+    <Compile Include="ModuloDeSorteos\OperacionesDeSorteosHistorico.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

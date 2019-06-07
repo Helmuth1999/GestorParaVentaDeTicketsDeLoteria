@@ -175,6 +175,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\SorteosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -280,6 +281,11 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\Sorteos\ActivarSorteo.cshtml" />
+    <Content Include="Views\Sorteos\Create.cshtml" />
+    <Content Include="Views\Sorteos\Details.cshtml" />
+    <Content Include="Views\Sorteos\InactivarSorteo.cshtml" />
+    <Content Include="Views\Sorteos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -292,6 +298,16 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GestorParaVentaDeLoteria.LogicaDeNegocio\GestorParaVentaDeLoteria.LogicaDeNegocio.csproj">
+      <Project>{77f60634-6580-47ec-a49a-ee65fe2a5c1b}</Project>
+      <Name>GestorParaVentaDeLoteria.LogicaDeNegocio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GestorParaVentaDeLoteria.Modelo\GestorParaVentaDeLoteria.Modelo.csproj">
+      <Project>{f6f614d6-11d8-4388-9eb1-f8131a74510e}</Project>
+      <Name>GestorParaVentaDeLoteria.Modelo</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
