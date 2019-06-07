@@ -51,6 +51,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SorteoDetalleVentas.cs" />
     <Compile Include="Sorteos.cs" />
+    <Compile Include="SorteosDetalleVentas.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
