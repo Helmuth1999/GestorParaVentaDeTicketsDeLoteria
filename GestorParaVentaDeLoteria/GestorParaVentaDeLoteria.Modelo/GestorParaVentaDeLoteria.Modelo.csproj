@@ -53,6 +53,7 @@
     <Compile Include="Sorteos.cs" />
     <Compile Include="SorteosDetalleVentas.cs" />
     <Compile Include="SorteosHistorico.cs" />
+    <Compile Include="SorteosRestriciones.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
