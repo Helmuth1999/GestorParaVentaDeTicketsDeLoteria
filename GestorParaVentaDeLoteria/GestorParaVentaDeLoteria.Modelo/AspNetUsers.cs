@@ -13,11 +13,11 @@ namespace GestorParaVentaDeLoteria.Modelo
         public string Id { get; set; }
         [StringLength(128)]
         public string Email { get; set; }
-        
+        [Display(Name = "Confimacion de correo electronico")]
         public Boolean EmailConfirmed { get; set; }
-        
+        [Display(Name = "Contraseña encriptada")]
         public string PasswordHash { get; set; }
-
+        [Display(Name = "Marca de seguridad")]
         public string SecurityStamp { get; set; }
 
         public string PhoneNumber { get; set; }
